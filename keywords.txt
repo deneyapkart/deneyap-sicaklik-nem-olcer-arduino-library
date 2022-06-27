@@ -1,0 +1,33 @@
+#######################################
+# Syntax Coloring Map For	Deneyap_SicaklikNemOlcer
+#######################################
+
+#######################################
+# Library (KEYWORD1)
+#######################################
+
+Deneyap_SicaklikNemOlcer	KEYWORD1	Deneyap_SicaklikNemOlcer
+
+####################################
+# Class (KEYWORD1)
+####################################
+
+TempHum	KEYWORD1	TempHum
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+getTempValue	KEYWORD2
+getHumValue	KEYWORD2
+getReadID	KEYWORD2
+sleep	KEYWORD2
+wakeup	KEYWORD2
+reset	KEYWORD2
+sendCommand	KEYWORD2
+readCommand	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
