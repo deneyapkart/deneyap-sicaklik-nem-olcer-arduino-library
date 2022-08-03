@@ -26,7 +26,7 @@ void setup() {
       delay(3000);
       Serial.println("SHTC3 I2C bağlantısı başarısız ");    //I2C bağlantısı başarısız olursa seri terminale yazdırıldı
    }  
-   OLED.begin();                                            //begin(slaveAdress) fonksiyonu ile cihazların haberleşmesi başlatıldı
+   OLED.begin(0x7A);                                        //begin(slaveAdress) fonksiyonu ile cihazların haberleşmesi başlatıldı
    OLED.clearDisplay();                                     //OLED ekranı silindi        
 }
 
