@@ -14,13 +14,19 @@
  *      ------> https://github.com/deneyapkart/deneyap-oled-ekran-arduino-library  <------
  *     
 */
-#include <Deneyap_SicaklikNemOlcer.h>                       // Deneyap_SicaklikNemOlcer.h kütüphanesi eklendi
-#include <Deneyap_OLED.h>                                   // Deneyap_OLED kütüphanesi eklendi
+#include <Deneyap_SicaklikNemOlcer.h>                       // Deneyap_SicaklikNemOlcer.h kütüphane eklenmesi
+#include <Deneyap_OLED.h>                                   // Deneyap_OLED kütüphane eklenmesi
 
-OLED OLED;                                                  //OLED örneğini tanımla
-TempHum SicNem;                                             //TempHum örneğini tanımla
+OLED OLED;                                                  // OLED için class tanımlaması
+TempHum SicNem;                                             // TempHum için class tanımlaması
   
 void setup() {
+<<<<<<< HEAD
+   Serial.begin(115200);                                    // Seri haberleşme başlatılması
+   SicNem.begin(0x70);                                      // begin(slaveAdress) fonksiyonu ile cihazların haberleşmesi başlatılması
+   OLED.begin(0x7A);                                        // begin(slaveAdress) fonksiyonu ile cihazların haberleşmesi başlatılması
+   OLED.clearDisplay();                                     // OLED ekranı silinmesi        
+=======
    Serial.begin(115200);                                    // seri terminal başlatıldı  
    if(!SicNem.begin(0x70)){                                 //begin(slaveAdress) fonksiyonu ile cihazların haberleşmesi başlatıldı
       delay(3000);
@@ -28,18 +34,19 @@ void setup() {
    }  
    OLED.begin(0x7A);                                        //begin(slaveAdress) fonksiyonu ile cihazların haberleşmesi başlatıldı
    OLED.clearDisplay();                                     //OLED ekranı silindi        
+>>>>>>> 1ef3a205c8e9251cd8ebffb38aa0c3b22a8d3e6b
 }
 
 void loop() {  
-   float Tempvalue = SicNem.getTempValue();                  //Sıcaklık değeri alındı
+   float Tempvalue = SicNem.getTempValue();                  // Sıcaklık değeri alınmaso
    Serial.print("   Sıcaklık = ");
    Serial.print(Tempvalue);
-   OLED.setTextXY(1,0);                                      //Satır ve sutun ayarlandı  
+   OLED.setTextXY(1,0);                                      // Satır ve sutun ayarlanması  
    OLED.putString("Sicaklik: ");
    OLED.setTextXY(1,10);
-   OLED.putFloat(Tempvalue);                                 //Sıcaklık değeri OLED ekrana yazdırıldı
+   OLED.putFloat(Tempvalue);                                 // Sıcaklık değeri OLED ekrana yazdırılması
      
-   float Humvalue = SicNem.getHumValue();                    // Nem değeri alındı
+   float Humvalue = SicNem.getHumValue();                    // Nem değeri alınması
    Serial.print("°C   Nem = %");
    Serial.println(Humvalue);
    OLED.setTextXY(3,0);            
