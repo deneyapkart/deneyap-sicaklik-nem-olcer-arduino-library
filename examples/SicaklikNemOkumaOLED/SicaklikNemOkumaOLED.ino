@@ -21,20 +21,10 @@ OLED OLED;                                                  // OLED için class 
 TempHum SicNem;                                             // TempHum için class tanımlaması
   
 void setup() {
-<<<<<<< HEAD
    Serial.begin(115200);                                    // Seri haberleşme başlatılması
    SicNem.begin(0x70);                                      // begin(slaveAdress) fonksiyonu ile cihazların haberleşmesi başlatılması
    OLED.begin(0x7A);                                        // begin(slaveAdress) fonksiyonu ile cihazların haberleşmesi başlatılması
-   OLED.clearDisplay();                                     // OLED ekranı silinmesi        
-=======
-   Serial.begin(115200);                                    // seri terminal başlatıldı  
-   if(!SicNem.begin(0x70)){                                 //begin(slaveAdress) fonksiyonu ile cihazların haberleşmesi başlatıldı
-      delay(3000);
-      Serial.println("SHTC3 I2C bağlantısı başarısız ");    //I2C bağlantısı başarısız olursa seri terminale yazdırıldı
-   }  
-   OLED.begin(0x7A);                                        //begin(slaveAdress) fonksiyonu ile cihazların haberleşmesi başlatıldı
-   OLED.clearDisplay();                                     //OLED ekranı silindi        
->>>>>>> 1ef3a205c8e9251cd8ebffb38aa0c3b22a8d3e6b
+   OLED.clearDisplay();                                     // OLED ekranı silinmesi         
 }
 
 void loop() {  
