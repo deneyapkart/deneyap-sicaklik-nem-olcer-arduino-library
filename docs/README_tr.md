@@ -33,6 +33,7 @@ Bu Arduino kütüphanesi Deneyap Sıcaklık&Nem SHTC3 Ölçerinin I2C çevre bir
 - `library.properties` Arduino yöneticisi için genel kütüphane özellikleri
 
 ## Sürüm Geçmişi
+1.0.1 - örnek uygulama hatası giderme
 1.0.0 - ilk sürüm
 
 ## :rocket:Donanım Bağlantıları

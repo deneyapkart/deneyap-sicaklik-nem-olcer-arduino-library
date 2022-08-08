@@ -14,7 +14,7 @@
  *      ------> https://github.com/deneyapkart/deneyap-oled-ekran-arduino-library  <------
  *     
 */
-#include <Deneyap_SicaklikNemOlcer.h>                       // Deneyap_SicaklikNemOlcer.h kütüphane eklenmesi
+#include <Deneyap_SicaklikNemOlcer.h>                       // Deneyap_SicaklikNemOlcer kütüphane eklenmesi
 #include <Deneyap_OLED.h>                                   // Deneyap_OLED kütüphane eklenmesi
 
 OLED OLED;                                                  // OLED için class tanımlaması
@@ -24,19 +24,19 @@ void setup() {
    Serial.begin(115200);                                    // Seri haberleşme başlatılması
    SicNem.begin(0x70);                                      // begin(slaveAdress) fonksiyonu ile cihazların haberleşmesi başlatılması
    OLED.begin(0x7A);                                        // begin(slaveAdress) fonksiyonu ile cihazların haberleşmesi başlatılması
-   OLED.clearDisplay();                                     // OLED ekranı silinmesi         
+   OLED.clearDisplay();                                     // OLED ekranın silinmesi         
 }
 
 void loop() {  
-   float Tempvalue = SicNem.getTempValue();                  // Sıcaklık değeri alınmaso
+   float Tempvalue = SicNem.getTempValue();                 // Sıcaklık değeri alınması
    Serial.print("   Sıcaklık = ");
    Serial.print(Tempvalue);
-   OLED.setTextXY(1,0);                                      // Satır ve sutun ayarlanması  
+   OLED.setTextXY(1,0);                                     // Satır ve sutun ayarlanması  
    OLED.putString("Sicaklik: ");
    OLED.setTextXY(1,10);
-   OLED.putFloat(Tempvalue);                                 // Sıcaklık değeri OLED ekrana yazdırılması
+   OLED.putFloat(Tempvalue);                                // Sıcaklık değeri OLED ekrana yazdırılması
      
-   float Humvalue = SicNem.getHumValue();                    // Nem değeri alınması
+   float Humvalue = SicNem.getHumValue();                   // Nem değeri alınması
    Serial.print("°C   Nem = %");
    Serial.println(Humvalue);
    OLED.setTextXY(3,0);            
