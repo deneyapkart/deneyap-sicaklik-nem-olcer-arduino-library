@@ -35,6 +35,7 @@ This Arduino library allows you to use Deneyap Temperature&Humidity SHTC3 with I
 
 ## Version History
 1.0.1 - bug fix for sketch
+
 1.0.0 - initial release
 
 ## :rocket:Hardware Connections
